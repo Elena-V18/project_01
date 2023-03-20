@@ -27,3 +27,20 @@ else:
     m = datetime.date(2023, month, 1).strftime('%B')
     print(f'Вы ввели: {m}')
     print(days[month - 1], 'дней')
+    
+# Нууууу, наверное в данной задаче добавять модуль datetime не обязательно))
+# Можно немного попроще)
+
+month = int(input('Введите номер месяц: '))
+
+# Решение 1
+if month in [1, 3, 5, 7, 8, 10, 12]:
+    print(31)
+elif month in [4, 6, 9, 11]:
+    print(30)
+elif month == 2:
+    print(28)
+else:
+    print('Введен неправильный номер месяца!')
+    
+    
