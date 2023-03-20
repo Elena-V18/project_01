@@ -72,3 +72,20 @@ print('С/B: Случайные песни -', song1)
 minutes1 = int(sum1)
 seconds1 = int(sum1 * 100 % 100)
 print('D/B: Три песни звучат - ', datetime.time(00, minutes1, seconds1).strftime('%M:%S'))
+
+# Да! Идея хорошая, но к сожалению мы не можем знать какой придет в 74-ой строке придет seconds.
+# Поэтому решение работает через раз((
+# Вот мой вариант решения для пункта A, C, D с дополнительным модулем math
+
+from datetime import timedelta
+from math import modf
+from random import sample 
+
+total_time = timedelta()
+
+for song in sample(my_favorite_songs, 3):
+    s, m = modf(song[1])
+    total_time += timedelta(minutes=int(m), seconds=int(s * 100))
+
+print(f'Три песни звучат {total_time} минут')
+
