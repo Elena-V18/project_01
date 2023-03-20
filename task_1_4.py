@@ -41,3 +41,5 @@ for prod_name, prod_code in titles.items():
         total_quantity += quantity
         cost += quantity * price
     print(prod_name, " - ", total_quantity, " шт, ", cost, "руб")
+    
+#  Отлично
