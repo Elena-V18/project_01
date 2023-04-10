@@ -25,3 +25,8 @@ def quarter_of(month):
         elif month == 10 or month == 11 or month == 12:
             return f'месяц {m} является частью четвёртого квартала'
 print(quarter_of(month))
+
+# Да, супер, можно и покороче)
+def quarter_of(month):
+    q = {1: (1,3), 2:(4,6), 3:(7,9), 4:(10,12)}
+    return [k for k,v in q.items() if v[0] <= month <= v[1]][0]
